@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+sudo chown -R matt /opt/visual-studio-code/resources/app/out/vs/workbench
+sudo chown matt /opt/visual-studio-code/resources/app
+sudo chown -R matt /opt/visual-studio-code/resources/app/out/vs/workbench

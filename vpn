@@ -1,0 +1,39 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import argparse
+import os
+
+parser = argparse.ArgumentParser(prog="vpn")
+
+# option that takes a value
+parser.add_argument(
+    "-c",
+    nargs="*",
+    dest="server",
+    action="store",
+    metavar="Country City",
+    help="Connect to VPN server",
+)
+parser.add_argument(
+    "-d", "--disconnect", action="store_true", help="Disconnects you from VPN"
+)
+parser.add_argument(
+    "-s", "--status", action="store_true", help="Shows connection status"
+)
+
+args = parser.parse_args()
+
+if args.server is not None:
+    if len(args.server) in [1, 2]:
+        serv = " ".join(args.server)
+    elif len(args.server) == 0:
+        serv = "us"
+    else:  # if more than 2 arguments are passed
+        print("Too many arguments for server")
+        exit()
+    os.system(f"nordvpn connect {serv}")
+elif args.status:
+    os.system("nordvpn status")
+elif args.disconnect:
+    os.system("nordvpn disconnect")

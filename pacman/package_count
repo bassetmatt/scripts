@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+/usr/bin/pacman -Qn | wc -l > /var/lib/pacman/pacman_count
+/usr/bin/pacman -Qm | wc -l > /var/lib/pacman/aur_count

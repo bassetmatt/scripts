@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Type = Package
+Target = visual-studio-code-bin
+
+[Action]
+Description = VSCode Doki Theme Permissions
+When = PostTransaction
+Exec = /home/matt/.local/bin/doki_command
+

@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+sudo reflector  \
+    -c fr,be,lu,nl,gb,de,ch,es \
+    -a 3 \
+    --delay 2 \
+    -p https,rsync \
+    --download-timeout 1 \
+    --connection-timeout 1 \
+    --sort rate \
+    --save /etc/pacman.d/mirrorlist
