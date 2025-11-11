@@ -18,7 +18,6 @@ from mutagen.id3._frames import (
 from mutagen.mp3 import MP3
 from PIL import Image
 
-
 ALB_ARTIST = "Various"
 ALBUM = "Various Pop Hits"
 ALB_PART = None  # Use if single disc

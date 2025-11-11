@@ -7,5 +7,5 @@ Target = visual-studio-code-bin
 [Action]
 Description = VSCode Doki Theme Permissions
 When = PostTransaction
-Exec = /home/matt/.local/bin/doki_command
+Exec = /home/matt/.local/bin/vs_code
 
